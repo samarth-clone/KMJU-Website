@@ -1,11 +1,102 @@
 .flagContainer {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: relative;
-    overflow: hidden;
+  width: 100vw; /* Full viewport width */
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed; /* Stick to the top of the page */
+  top: 0;
+  overflow: hidden;
+  z-index: 1000; /* Ensure it stays above other content */
+}
+
+/* Flag Parts */
+.topSection, .bottomSection {
+  width: 100%;
+  height: 50%;
+  position: absolute;
+}
+
+/* Flag Colors */
+.topSection {
+  background-color: #FFD700;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bottomSection {
+  background-color: #8B0000;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Text Animation for Kannada Heading */
+@keyframes fadeIn {
+  0% {
+      opacity: 0;
   }
-  /* Additional CSS styles here */
-  
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes gradientCycle {
+  0% {
+      background-position: -200% 0%;
+  }
+  50% {
+      background-position: 200% 0%;
+  }
+  100% {
+      background-position: -200% 0%;
+  }
+}
+
+/* Kannada Text Styling */
+.kannadaHeading {
+  font-size: 3.5em;
+  color: white;
+  font-weight: bold;
+  font-family: 'Noto Sans Kannada', sans-serif;
+  text-align: center;
+  animation: fadeIn 2s ease-in-out, gradientCycle 20s linear infinite;
+  background: linear-gradient(90deg, #8B0000, #FFFFFF, #8B0000);
+  background-size: 400% 100%;
+  background-position: -200% 0%;
+  -webkit-background-clip: text;
+  color: transparent;
+  padding: 10px 0;
+}
+
+/* English Heading Styling */
+.englishHeadingContainer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  position: relative;
+}
+
+.englishHeading {
+  font-size: 2.5em;
+  color: white;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+  text-align: left;
+  white-space: nowrap;
+  padding-right: 100%;
+  animation: tickerEffect 30s linear infinite;
+}
+
+/* Scrolling Animation */
+@keyframes tickerEffect {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
