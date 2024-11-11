@@ -7,7 +7,7 @@ import Events from './Events';
 import News from './News';
 import Membership from './Membership';
 import Contact from './Contact';
-import './styles/globals.css';
+// import './styles/globals.css';
 
 const Home: React.FC = () => {
   return (

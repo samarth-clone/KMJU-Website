@@ -1,5 +1,5 @@
 import React from 'react';
-import './Section.module.css';
+// import './Section.module.css';
 
 const About: React.FC = () => (
   <section id="about" className="section">
