@@ -1,17 +1,22 @@
 nav {
     display: flex;
     justify-content: space-between;
-    background-color: #f2f2f2;
+    background-color: #FFD700; /* Yellow color */
     padding: 1rem;
-    width: 100%;
+    width: 100vw; /* Full viewport width */
+    position: fixed; /* Keep the navigation bar fixed on top */
+    top: 0;
+    left: 0;
+    z-index: 1000; /* Ensure it stays above other content */
 }
 
 a {
     text-decoration: none;
-    color: #333;
+    color: #333; /* Dark color for the text */
     margin-right: 1rem;
 }
 
 a:hover {
-    color: #666;
+    color: #666; /* Darker color on hover */
 }
+    

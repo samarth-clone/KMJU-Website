@@ -1,14 +1,28 @@
 import React from 'react';
-import '../styles/Navbar.module.css';
+import { Link } from 'react-router-dom';
 
-const Navbar: React.FC = () => (
-  <nav>
-    <a href="#about">About Us</a>
-    <a href="#events">Events</a>
-    <a href="#news">News</a>
-    <a href="#membership">Membership</a>
-    <a href="#contact">Contact Us</a>
-  </nav>
-);
+const Navbar: React.FC = () => {
+  return (
+    <nav className="navbar">
+      <ul className="navbar-links">
+        <li>
+          <Link to="/">About</Link>
+        </li>
+        <li>
+          <Link to="/events">Events</Link>
+        </li>
+        <li>
+          <Link to="/news">News</Link>
+        </li>
+        <li>
+          <Link to="/membership">Membership</Link>
+        </li>
+        <li>
+          <Link to="/contact">Contact</Link>
+        </li>
+      </ul>
+    </nav>
+  );
+};
 
-export default Navbar
+export default Navbar;
